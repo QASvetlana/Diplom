@@ -24,7 +24,7 @@ class AuthPage extends Page {
 //локатор
 //ввод емейла
 get inputEmail () {
-    return $("(//input[contains(@class,'auth-form__input')])[1]");
+    return $("//input[contains(@class, 'auth-input_primary') and @type='text']");
 }
 //метод
 public async enterEmailField(email: string) {
@@ -34,12 +34,23 @@ public async enterEmailField(email: string) {
 //локатор
 //ввод пароля
 get inputPassword () {
-    return $("(//input[contains(@class,'auth-form__input')])[2]");
+    return $("//input[contains(@class, 'auth-input_primary') and @type='password']");
 }
 //метод
 public async enterPasswordField(password: string) {
     await this.inputPassword.setValue(password);
 }
+
+//локатор
+//кнопка входа
+get btnEntyLogin () {
+    return $("//button[contains(@class, 'auth-button_primary')]");
+}
+//метод
+public async clickBottonLogOn() {
+    await this.btnEntyLogin.click();
+}
+
 
 //Зарегистрироваться на Onlíner
 get linkRegistration () {
@@ -47,7 +58,16 @@ get linkRegistration () {
 }
 //метод
 public async clickRegistrationLink() {
-    await (await this.linkRegistration).click();
+    await this.linkRegistration.click();
+}
+
+//Капча
+get captcha () {
+    return $("//iframe[@title= 'reCAPTCHA']");
+}
+//метод
+public async captchaExist() {
+    await this.captcha.isDisplayed();
 }
 }
 
