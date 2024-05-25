@@ -1,0 +1,3 @@
+export const testUserLogin: string = "sve7987@yandex.ru";
+export const testUserPassword: string = "Qaz123456";
+export const userToken: string = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozODEzMzU5LCJ1c2VyX3R5cGUiOiJ1c2VyIiwiZmluZ2VycHJpbnQiOiI0MjM2OTYzNjg0ODliYjBkYzc1Y2RhMzU3YjA2Yjg2NSIsImV4cCI6MjAzMTM3NTM4OSwiaWF0IjoxNzE2MDE1Mzg5fQ.RTES7Qln2EL4zOV0-LLQLrC0ERQ2iHfm4umI6DlsiUw627-W_RQeDqEbdHdy26U5sgx7aDLqSXU_yx6CFVN9Ew';
